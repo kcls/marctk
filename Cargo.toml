@@ -1,14 +1,14 @@
 [package]
 name = "marctk"
-version = "0.6.1"
+version = "0.7.0"
 edition = "2024"
 authors = ["Bill Erickson <berickxx@gmail.com>"]
-license = "MIT"
+license = "Apache-2.0"
 description = "MARC21 Binary, Breaker, and XML Toolkit"
 readme = "README.md"
 keywords = ["marc", "marc21", "marcxml", "library", "bibliographic"]
 categories = ["parser-implementations", "value-formatting", "command-line-utilities"]
-repository = "https://github.com/kcls/evergreen-universe-rs"
+repository = "https://github.com/kcls/marctk"
 
 [dependencies]
 getopts = "0.2.21"
