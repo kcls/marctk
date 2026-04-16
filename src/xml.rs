@@ -177,10 +177,10 @@ impl XmlRecordIterator {
                     }
                     context.in_cfield = false;
                 } else if context.in_subfield {
-                    if let Some(field) = record.fields_mut().last_mut() {
-                        if let Some(subfield) = field.subfields_mut().last_mut() {
-                            subfield.set_content(characters);
-                        }
+                    if let Some(field) = record.fields_mut().last_mut()
+                        && let Some(subfield) = field.subfields_mut().last_mut()
+                    {
+                        subfield.set_content(characters);
                     }
                     context.in_subfield = false;
                 }

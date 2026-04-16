@@ -251,24 +251,36 @@ mod tests {
         let _ = field.set_ind1("1");
         let _ = field.set_ind2("4");
 
-        assert!(ComplexSpecification::try_from("245a")
-            .unwrap()
-            .matches_field(&field));
-        assert!(ComplexSpecification::try_from("2xxa")
-            .unwrap()
-            .matches_field(&field));
-        assert!(ComplexSpecification::try_from("245(14)a")
-            .unwrap()
-            .matches_field(&field));
-        assert!(ComplexSpecification::try_from("245(1*)a")
-            .unwrap()
-            .matches_field(&field));
-        assert!(!ComplexSpecification::try_from("245(00)a")
-            .unwrap()
-            .matches_field(&field));
-        assert!(!ComplexSpecification::try_from("650(14)")
-            .unwrap()
-            .matches_field(&field));
+        assert!(
+            ComplexSpecification::try_from("245a")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            ComplexSpecification::try_from("2xxa")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            ComplexSpecification::try_from("245(14)a")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            ComplexSpecification::try_from("245(1*)a")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            !ComplexSpecification::try_from("245(00)a")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            !ComplexSpecification::try_from("650(14)")
+                .unwrap()
+                .matches_field(&field)
+        );
     }
 
     #[test]
@@ -277,11 +289,15 @@ mod tests {
         let _ = field.set_ind1("0");
         let _ = field.set_ind2(" ");
 
-        assert!(ComplexSpecification::try_from("100(0_)")
-            .unwrap()
-            .matches_field(&field));
-        assert!(ComplexSpecification::try_from("100(0*)")
-            .unwrap()
-            .matches_field(&field));
+        assert!(
+            ComplexSpecification::try_from("100(0_)")
+                .unwrap()
+                .matches_field(&field)
+        );
+        assert!(
+            ComplexSpecification::try_from("100(0*)")
+                .unwrap()
+                .matches_field(&field)
+        );
     }
 }

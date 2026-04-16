@@ -1,5 +1,5 @@
-use marc::Record;
 use marc::MARCXML_NAMESPACE;
+use marc::Record;
 use marctk as marc;
 use std::env;
 use std::fs::File;

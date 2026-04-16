@@ -1,4 +1,4 @@
-use criterion::{criterion_group, criterion_main, Criterion};
+use criterion::{Criterion, criterion_group, criterion_main};
 use marctk::Record;
 
 pub fn extract_values_benchmark(c: &mut Criterion) {
