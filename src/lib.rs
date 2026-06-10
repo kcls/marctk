@@ -8,7 +8,7 @@
 //! - **marc21_bibliographic**: convenience methods to get
 //!   commonly used data from a MARC21 bibliographic record
 
-#![cfg_attr(docsrs, feature(doc_auto_cfg))]
+#![cfg_attr(docsrs, feature(doc_cfg))]
 
 pub use self::record::Controlfield;
 pub use self::record::Field;
